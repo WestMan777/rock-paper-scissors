@@ -1,5 +1,16 @@
-let userChoice = prompt('Rock, Paper, or Scissors?: ');                                     //gets the users answer
+var userChoice = "blank"; 
 let computerChoice;
+let output;
+
+const rock = document.querySelector("#rock");                                               //query selectors for buttons
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+const playButton = document.querySelector("#play-button");
+const shootButton = document.querySelector("#shoot-button");
+
+const pChoice = document.querySelector("#player-choice");                                   //query selectors for outputs
+const cChoice = document.querySelector("#computer-choice");
+const result = document.querySelector("#result");
 
 function getCompChoice() {                                                                  //function that randomly chooses the computers answer
     let answer = 0;
@@ -26,32 +37,70 @@ function getCompChoice() {                                                      
 
 function compareChoices() {                                                                 //function that tests who the winner is by comparing the choices
     if(computerChoice === userChoice) {
-        console.log('its a TIE!')
+        output = 'its a TIE!';
     }
     else if(computerChoice === 'rock' & userChoice === 'scissors') {
-        console.log('Computer Wins!')
+        output = 'Computer Wins!';
     }
     else if(computerChoice === 'paper' & userChoice === 'rock') {
-        console.log('Computer Wins!')
+        output = 'Computer Wins!';
     }
     else if(computerChoice === 'scissors' & userChoice === 'paper') {
-        console.log('Computer Wins!')
+        output = 'Computer Wins!';
     }
     else if(computerChoice === 'rock' & userChoice === 'paper') {
-        console.log('User Wins!')
+        output = 'User Wins!';
     }
     else if(computerChoice === 'paper' & userChoice === 'scissors') {
-        console.log('User Wins!')
+        output = 'User Wins!';
     }
     else if(computerChoice === 'scissors' & userChoice === 'rock') {
-        console.log('User Wins!')
+        output = 'User Wins!';
     }
     else {
-        console.log('Draw');
+        output = '';
     }
 }
 
-getCompChoice();
-console.log('computer chose: ', computerChoice);                                            //prints the user and computer choices to the console
-console.log('user chose: ', userChoice);
-compareChoices();
+function showResults() {
+    if(userChoice === ""){
+        cChoice.textContent = "";
+        pChoice.textContent = "";
+        result.textContent = "";
+    }
+    else {
+        cChoice.textContent = computerChoice;
+        pChoice.textContent = userChoice;
+        result.textContent = output;
+    }
+}
+
+var playCount = 0;
+
+function play() {
+    playCount = playCount++;
+
+    rock.addEventListener("click", function(){
+        userChoice = "rock";
+        return userChoice;
+    });
+    
+    paper.addEventListener("click", function(){
+        userChoice = "paper";
+        return userChoice;
+    });
+    
+    scissors.addEventListener("click", function(){
+        userChoice = "scissors";
+        return userChoice;
+    });
+}
+
+function shoot() {
+    getCompChoice();
+    compareChoices();
+    showResults();
+}
+
+playButton.addEventListener('click', play);
+shootButton.addEventListener('click', shoot)

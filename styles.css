@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#main-container {
+    padding: 50px;
+    flex-direction: column;
+}
+
+#directions {
+    padding: 25px;
+}
+
+#output-container {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+}
+
+#choices {
+    flex-direction: row;
+    gap: 25px;
+}
+
+.output-text {
+    gap: 10px;
+}
+
+#player-choice {
+    flex: 1;
+    border-bottom: 1px solid;
+}
+
+#computer-choice {
+    flex: 1;
+    border-bottom: 1px solid;
+}
+
+#button-container {
+    padding: 10px;
+    border: 2px double black;
+    border-radius: 5px;;
+    flex: 1;
+    flex-direction: row;
+    gap: 15px;
+    margin: 25px;
+}
+
+#button-box {
+    padding: 10px;
+}
+
+.button-rps {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#rock-button {
+    background-color: grey;
+}
+
+#paper-button {
+    background-color: burlywood;
+}
+
+#scissors-button {
+    background-color: silver;
+}
+
+#play-button-container {
+    gap: 35px;
+}
+
+#play-button {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#shoot-button {
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+}
