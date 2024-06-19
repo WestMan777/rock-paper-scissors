@@ -3,10 +3,65 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <title></title>
     </head>
 
     <body>
-        <script src="script.js"></script>
+        <div id="main-container" class="container">
+            <div id="diections-container" class="container">
+                <div id="directions">
+                    Press "Start" to begin the game. 
+                    Then make a selection and press "SHOOT" to submit your 
+                    selection!
+                </div>
+            </div>
+
+            <div id="output-container" class="container">
+                <div id="choices">
+                    <div class="output-text">
+                        <p>Player Choice: </p>
+                        <p id="player-choice"></p>
+                    </div>
+                    <div class="output-text">
+                        <p>Computer Choice: </p>
+                        <p id="computer-choice"></p>
+                    </div>
+                </div>
+                <div class="output-text">
+                    <p>Output: </p>
+                    <p id="result"></p>
+                </div>
+                
+            </div>
+
+            <div id="button-container" class="container">
+                <div id="button-box" class="continaer">
+                    <div id="rock">
+                        <button id="rock-button" class="button-rps">Rock</button>
+                    </div>
+                </div>
+                
+                <div id="button-box" class="container">
+                    <div id="paper">
+                        <button id="paper-button" class="button-rps">Paper</button>
+                    </div>
+                </div>
+                
+                <div id="button-box" class="container">
+                    <div id="scissors">
+                        <button id="scissors-button" class="button-rps">Scissors</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bottom-container" class="container">
+                <div id="play-button-container">
+                    <button id="shoot-button">SHOOT!</button>
+                    <button id="play-button">Start</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
